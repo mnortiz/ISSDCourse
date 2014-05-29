@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tests</title>
+  <link rel="stylesheet" href="qunit-1.14.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="qunit-1.14.0.js"></script>
+  <script src="../Exercises/BeforeStart/tests.js"></script>
+  <script>
+	test("Type inference test", function() {
+		ok(!areEquals("10", 10), "Different types should not be equals");
+		ok(areEquals(10, 10), "Equal types should be equals");
+	});
+	
+	test("Syntax handling", function() {
+		ok(getMessage(10, 10) == "Are equals", "Two equal values return correct message");
+		ok(getMessage(10, 11) == "Are not equals", "Two not equal values return correct message");
+		ok(getObject().ok, "Ok property should be true");
+	});
+	
+  </script>
+</body>
+</html>
